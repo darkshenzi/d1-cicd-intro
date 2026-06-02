@@ -1,9 +1,9 @@
-name: Intro
+name: Discord
 
 on: workflow_dispatch
 
 jobs:
-  say-hello:
+  discord:
     runs-on: ubuntu-slim
     steps:
       - name: Hello world action
