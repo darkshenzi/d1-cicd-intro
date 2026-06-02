@@ -12,4 +12,4 @@ jobs:
           super_secret: ${{ secrets.Test }}
           super_var: ${{ vars.Test2 }}
         run: |
-          curl -H "Content-Type: application/json" -X POST -d '{"content": \"$super_var\"}' $discord_secret
+          curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"$super_var\"}" $discord_secret
