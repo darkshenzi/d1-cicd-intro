@@ -12,4 +12,4 @@ jobs:
           super_var: ${{ vars.Test2 }}
         run: |
           echo "Hello this is a secret: $SUPER_SECRET"
-          echo "Hello this is a var $super_var"
+          echo "Hello this is a var: $super_var"
