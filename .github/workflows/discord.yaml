@@ -1,0 +1,17 @@
+name: Intro
+
+on: workflow_dispatch
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Hello world action
+        env: # Set the secret as an input
+          discord_secret: ${{ secrets.Discord }}
+          super_secret: ${{ secrets.Test }}
+          super_var: ${{ vars.Test2 }}
+        run: |
+          echo "Hello this is a secret: $SUPER_SECRET"
+          echo "Hello this is a var: $super_var"
+          curl -H "Content-Type: application/json" -X POST \ -d '{"content":"$super_var"}' $discord_secret
